@@ -1,12 +1,55 @@
 import type { Metadata } from "next";
 import "./globals.css";
-// Ganti bagian ini dengan jalur relatif (mundur satu folder ke src, lalu masuk ke components)
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "CV Aneka Technic",
-  description: "Layanan perbaikan dan cuci AC bergaransi.",
+  title: {
+    default: "Jasa AC Purwokerto | CV Aneka Technic",
+    template: "%s | CV Aneka Technic",
+  },
+  description:
+    "CV Aneka Technic menyediakan jasa service AC, cuci AC, perbaikan AC, instalasi AC, dan maintenance AC di Purwokerto dan sekitarnya.",
+
+  keywords: [
+    "jasa AC Purwokerto",
+    "service AC Purwokerto",
+    "cuci AC Purwokerto",
+    "perbaikan AC Purwokerto",
+    "instalasi AC Purwokerto",
+    "maintenance AC Purwokerto",
+    "teknisi AC Purwokerto",
+    "CV Aneka Technic",
+  ],
+
+  authors: [{ name: "CV Aneka Technic" }],
+  creator: "CV Aneka Technic",
+  publisher: "CV Aneka Technic",
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+
+  openGraph: {
+    title: "Jasa AC Purwokerto | CV Aneka Technic",
+    description:
+      "Layanan service AC, cuci AC, perbaikan AC, instalasi AC, dan maintenance AC di Purwokerto dan sekitarnya.",
+    type: "website",
+    locale: "id_ID",
+    siteName: "CV Aneka Technic",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Jasa AC Purwokerto | CV Aneka Technic",
+    description:
+      "Jasa service AC, cuci AC, perbaikan AC, instalasi AC, dan maintenance AC di Purwokerto.",
+  },
 };
 
 export default function RootLayout({
