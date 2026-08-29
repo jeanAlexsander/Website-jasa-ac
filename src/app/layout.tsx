@@ -26,6 +26,10 @@ export const metadata: Metadata = {
   creator: "CV Aneka Technic",
   publisher: "CV Aneka Technic",
 
+  verification: {
+    google: "ou1Km54I3Ca-5taQo_64U0nvzKd6fDDwEUBKGbI0gTk",
+  },
+
   robots: {
     index: true,
     follow: true,
