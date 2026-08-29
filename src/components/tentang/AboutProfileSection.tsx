@@ -1,0 +1,65 @@
+import Image from "next/image";
+import SectionHeader from "../ui/SectionHeader";
+import { profilePoints } from "../../data/tentang";
+
+export default function ProfileSection() {
+  return (
+    <section className="bg-slate-50 py-20">
+      <div className="mx-auto max-w-7xl px-6">
+        <SectionHeader
+          badge="PROFIL PERUSAHAAN"
+          title="Mitra Terpercaya Untuk Kebutuhan AC Anda"
+          description="Kami berkomitmen memberikan layanan service AC yang profesional dengan mengutamakan kualitas pekerjaan dan kepuasan pelanggan."
+        />
+
+        <div className="mt-16 grid items-center gap-16 lg:grid-cols-2">
+          {/* Image */}
+          <div>
+            <Image
+              src="/images/pasang-ac-3.png"
+              alt="CV Aneka Technic"
+              width={600}
+              height={450}
+              className="rounded-4xl object-cover shadow-xl"
+            />
+          </div>
+
+          {/* Content */}
+          <div>
+            <h3 className="text-3xl font-bold text-slate-900">
+              Tentang CV. Aneka Technic
+            </h3>
+
+            <p className="mt-6 leading-8 text-slate-600">
+              CV. Aneka Technic merupakan perusahaan yang bergerak di bidang
+              layanan service, perawatan, dan instalasi AC untuk kebutuhan
+              rumah, kantor, ruko, maupun berbagai jenis bangunan lainnya.
+            </p>
+
+            <p className="mt-5 leading-8 text-slate-600">
+              Dengan dukungan teknisi yang berpengalaman, kami berusaha
+              memberikan solusi AC yang cepat, tepat, dan berkualitas. Kami
+              percaya bahwa pelayanan yang baik bukan hanya tentang memperbaiki
+              masalah AC, tetapi juga memberikan kenyamanan dan kepercayaan
+              kepada setiap pelanggan.
+            </p>
+
+            <div className="mt-8 space-y-4">
+              {profilePoints.map((item) => {
+                const Icon = item.icon;
+
+                return (
+                  <div key={item.text} className="flex items-center gap-3">
+                    <Icon className="h-6 w-6 text-orange-700" />
+
+                    <span className="text-slate-700">{item.text}</span>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
