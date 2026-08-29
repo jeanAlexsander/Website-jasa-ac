@@ -5,7 +5,7 @@ import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "CV ANEKA TECHNIC PURWOKERTO",
+  title: "CV Aneka Technic",
   description: "Layanan perbaikan dan cuci AC bergaransi.",
 };
 
