@@ -2,10 +2,10 @@ import Image from "next/image";
 
 export default function LayananHero() {
   return (
-    <section className="relative overflow-hidden bg-zinc-500">
+    <section className="relative overflow-hidden bg-zinc-300">
       <div className="absolute inset-0">
         <Image
-          src="/images/pasang-ac-4.png"
+          src="/images/pasang-ac-9.png"
           alt="Layanan AC"
           fill
           className="object-cover opacity-40"

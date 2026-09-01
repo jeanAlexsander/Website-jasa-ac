@@ -1,5 +1,6 @@
 import { prices } from "../../data/layanan";
 import SectionHeader from "../ui/SectionHeader";
+import { MessageCircle } from "lucide-react";
 
 export default function PriceSection() {
   return (
@@ -60,9 +61,17 @@ export default function PriceSection() {
                 </div>
 
                 {/* Button */}
-                <button className="mt-8 w-full rounded-xl border border-orange-700 px-4 py-3 text-sm font-semibold text-orange-700 transition hover:bg-orange-700 hover:text-white">
+                <a
+                  href={`https://wa.me/6285801330301?text=${encodeURIComponent(
+                    `Hai kak, saya tertarik dengan layanan ${item.title}. Bisa info lebih lanjut?`,
+                  )}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-xl border border-orange-700 px-4 py-3 text-sm font-semibold text-orange-700 transition hover:bg-orange-700 hover:text-white"
+                >
+                  <MessageCircle className="h-4 w-4" />
                   Pesan Sekarang
-                </button>
+                </a>
               </div>
             );
           })}

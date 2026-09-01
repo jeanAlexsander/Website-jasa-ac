@@ -16,7 +16,7 @@ export default function ProfileSection() {
           {/* Image */}
           <div>
             <Image
-              src="/images/pasang-ac-3.png"
+              src="/images/pasang-ac-10.png"
               alt="CV Aneka Technic"
               width={600}
               height={450}

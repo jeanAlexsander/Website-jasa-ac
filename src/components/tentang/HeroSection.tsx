@@ -26,7 +26,7 @@ export default function AboutHero() {
         {/* Right */}
         <div className="relative">
           <Image
-            src="/images/pasang-ac-4.png"
+            src="/images/pasang-ac-8.png"
             alt="Teknisi CV. Aneka Technic"
             width={650}
             height={500}

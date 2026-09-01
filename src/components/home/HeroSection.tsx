@@ -57,7 +57,7 @@ export default function HeroSection() {
             {/* Foto Besar */}
             <div className="col-span-2">
               <Image
-                src="/images/pasang-ac-3.png"
+                src="/images/pasang-ac-8.png"
                 alt="Service AC"
                 width={700}
                 height={700}
@@ -77,7 +77,7 @@ export default function HeroSection() {
               />
 
               <Image
-                src="/images/pasang-ac-2.png"
+                src="/images/pasang-ac-7.png"
                 alt="Perawatan AC"
                 width={300}
                 height={340}
