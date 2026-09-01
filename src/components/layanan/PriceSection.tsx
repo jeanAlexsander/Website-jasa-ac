@@ -1,8 +1,27 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
 import { prices } from "../../data/layanan";
 import SectionHeader from "../ui/SectionHeader";
 import { MessageCircle } from "lucide-react";
 
 export default function PriceSection() {
+  const [selectedService, setSelectedService] = useState<string | null>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = () => {
+      setSelectedService(null);
+    };
+
+    if (selectedService) {
+      document.addEventListener("click", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [selectedService]);
   return (
     <section className="bg-slate-50 py-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -60,18 +79,87 @@ export default function PriceSection() {
                   </ul>
                 </div>
 
-                {/* Button */}
-                <a
-                  href={`https://wa.me/6285801330301?text=${encodeURIComponent(
-                    `Hai kak, saya tertarik dengan layanan ${item.title}. Bisa info lebih lanjut?`,
-                  )}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-xl border border-orange-700 px-4 py-3 text-sm font-semibold text-orange-700 transition hover:bg-orange-700 hover:text-white"
-                >
-                  <MessageCircle className="h-4 w-4" />
-                  Pesan Sekarang
-                </a>
+                {/* Button + Contact Selection */}
+                <div ref={contactRef} className="relative mt-8">
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+
+                      setSelectedService(
+                        selectedService === item.title ? null : item.title,
+                      );
+                    }}
+                    className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-orange-700 px-4 py-3 text-sm font-semibold text-orange-700 transition hover:bg-orange-700 hover:text-white"
+                  >
+                    <MessageCircle className="h-4 w-4" />
+                    Pesan Sekarang
+                  </button>
+
+                  {selectedService === item.title && (
+                    <div
+                      onClick={(e) => e.stopPropagation()}
+                      className="absolute bottom-full left-0 z-20 mb-3 w-full overflow-hidden rounded-2xl border border-slate-200 bg-white p-2 shadow-xl"
+                    >
+                      <div className="px-3 py-2">
+                        <p className="text-sm font-semibold text-slate-900">
+                          Pilih Kontak WhatsApp
+                        </p>
+                        <p className="mt-1 text-xs text-slate-500">
+                          Pilih admin yang ingin Anda hubungi
+                        </p>
+                      </div>
+
+                      {/* Admin 1 */}
+                      <a
+                        href={`https://wa.me/6285801330301?text=${encodeURIComponent(
+                          `Hai kak, saya tertarik dengan layanan ${item.title}. Bisa info lebih lanjut?`,
+                        )}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => setSelectedService(null)}
+                        className="group flex items-center gap-3 rounded-xl px-3 py-3 transition hover:bg-orange-50"
+                      >
+                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-orange-100 text-orange-700 transition group-hover:bg-orange-600 group-hover:text-white">
+                          <MessageCircle className="h-5 w-5" />
+                        </div>
+
+                        <div>
+                          <p className="text-sm font-semibold text-slate-900">
+                            Admin 1
+                          </p>
+                          <p className="text-xs text-slate-500">
+                            0858-0133-0301
+                          </p>
+                        </div>
+                      </a>
+
+                      {/* Admin 2 */}
+                      <a
+                        href={`https://wa.me/6285227022999?text=${encodeURIComponent(
+                          `Hai kak, saya tertarik dengan layanan ${item.title}. Bisa info lebih lanjut?`,
+                        )}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => setSelectedService(null)}
+                        className="group flex items-center gap-3 rounded-xl px-3 py-3 transition hover:bg-orange-50"
+                      >
+                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-orange-100 text-orange-700 transition group-hover:bg-orange-600 group-hover:text-white">
+                          <MessageCircle className="h-5 w-5" />
+                        </div>
+
+                        <div>
+                          <p className="text-sm font-semibold text-slate-900">
+                            Admin 2
+                          </p>
+                          <p className="text-xs text-slate-500">
+                            0852-2702-2999
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+                  )}
+                </div>
               </div>
             );
           })}

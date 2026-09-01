@@ -3,12 +3,12 @@ import {
   Snowflake,
   ShieldCheck,
   BadgeDollarSign,
-  ThermometerSnowflake,
+  PackageOpen,
+  Wind,
   PhoneCall,
   CalendarClock,
   Truck,
   CircleCheckBig,
-  CheckCircle2,
   Settings,
 } from "lucide-react";
 
@@ -66,19 +66,27 @@ export const advantages = [
 
 export const homeServices = [
   {
-    icon: Snowflake,
-    title: "Cuci AC",
-    desc: "Membersihkan unit indoor dan outdoor agar AC kembali dingin, bersih, dan lebih hemat listrik.",
+    icon: Wind,
+    title: "Cleaning AC",
+    desc: "Membersihkan unit indoor dan outdoor agar AC kembali dingin, bersih, dan bekerja lebih optimal.",
   },
+
   {
     icon: Wrench,
     title: "Service AC",
-    desc: "Mengatasi AC bocor, tidak dingin, mati total, berisik, maupun kerusakan lainnya.",
+    desc: "Mengatasi berbagai masalah AC seperti tidak dingin, bocor, berisik, mati total, dan kerusakan lainnya.",
   },
+
   {
-    icon: ThermometerSnowflake,
-    title: "Isi Freon",
-    desc: "Pengisian Freon R32, R410A, R22 serta pengecekan tekanan sistem pendingin.",
+    icon: Snowflake,
+    title: "Pasang AC",
+    desc: "Pemasangan AC baru dengan instalasi yang rapi, aman, dan disesuaikan dengan kebutuhan ruangan.",
+  },
+
+  {
+    icon: PackageOpen,
+    title: "Bongkar Pasang",
+    desc: "Membongkar dan memasang kembali unit AC dengan aman serta memastikan AC berfungsi dengan baik.",
   },
 ];
 

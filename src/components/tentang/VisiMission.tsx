@@ -21,9 +21,9 @@ export default function VisionMission() {
             <h3 className="mb-4 text-2xl font-bold text-slate-900">Visi</h3>
 
             <p className="leading-relaxed text-slate-600">
-              Menjadi penyedia layanan AC terpercaya dengan pelayanan
-              profesional, berkualitas, dan berorientasi pada kepuasan
-              pelanggan.
+              Menjadi perusahaan jasa teknik elektronik yang profesional,
+              terpercaya, inovatif, serta menjadi pilihan utama masyarakat dan
+              dunia industri.
             </p>
           </div>
 
@@ -38,22 +38,26 @@ export default function VisionMission() {
             <ul className="space-y-3 text-slate-600">
               <li className="flex gap-3">
                 <span className="mt-2 h-2 w-2 rounded-full bg-orange-500" />
-                Memberikan layanan AC yang cepat dan berkualitas.
+                Memberikan pelayanan terbaik.
               </li>
 
               <li className="flex gap-3">
                 <span className="mt-2 h-2 w-2 rounded-full bg-orange-500" />
-                Mengutamakan kejujuran dan transparansi dalam pelayanan.
+                Menjamin kualitas pekerjaan.
               </li>
 
               <li className="flex gap-3">
                 <span className="mt-2 h-2 w-2 rounded-full bg-orange-500" />
-                Melakukan pengerjaan dengan standar aman dan rapi.
+                Mengembangkan kompetensi SDM.
               </li>
 
               <li className="flex gap-3">
                 <span className="mt-2 h-2 w-2 rounded-full bg-orange-500" />
-                Membangun hubungan jangka panjang dengan pelanggan.
+                Menjalin hubungan jangka panjang dengan pelanggan.
+              </li>
+              <li className="flex gap-3">
+                <span className="mt-2 h-2 w-2 rounded-full bg-orange-500" />
+                Mengikuti perkembangan teknologi
               </li>
             </ul>
           </div>

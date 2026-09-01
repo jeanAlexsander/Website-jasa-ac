@@ -14,7 +14,7 @@ export default function ServicesSection() {
         />
 
         {/* Cards */}
-        <div className="mt-16 grid gap-8 md:grid-cols-3">
+        <div className="mt-16 grid gap-8 md:grid-cols-2">
           {homeServices.map((item) => {
             const Icon = item.icon;
 
@@ -32,10 +32,6 @@ export default function ServicesSection() {
                 </h3>
 
                 <p className="mt-4 leading-7 text-slate-600">{item.desc}</p>
-
-                <button className="mt-8 font-semibold text-orange-700 transition-all duration-300 group-hover:translate-x-1">
-                  Pelajari Selengkapnya →
-                </button>
               </div>
             );
           })}

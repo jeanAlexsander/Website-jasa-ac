@@ -16,10 +16,11 @@ export default function AboutHero() {
           </h1>
 
           <p className="mt-8 max-w-xl text-lg leading-8 text-slate-600">
-            CV. Aneka Technic merupakan penyedia jasa service, perawatan, dan
-            instalasi AC yang berkomitmen memberikan pelayanan profesional,
-            harga yang transparan, serta hasil pekerjaan yang berkualitas untuk
-            rumah maupun bisnis.
+            CV Aneka Technic merupakan perusahaan yang bergerak di bidang jasa
+            instalasi, perawatan, perbaikan, dan pemeliharaan berbagai peralatan
+            elektronik rumah tangga maupun komersial. Perusahaan berfokus pada
+            kualitas pelayanan, ketepatan waktu, serta kepuasan pelanggan dengan
+            didukung tenaga teknisi yang kompeten.
           </p>
         </div>
 
