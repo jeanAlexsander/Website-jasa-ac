@@ -37,7 +37,7 @@ export default function Footer() {
             <div className="flex items-center gap-3">
               <Phone size={18} className="text-cyan-400 shrink-0" />
 
-              <p className="text-zinc-300">0812-xxxx-xxxx</p>
+              <p className="text-zinc-300">0858-0133-0301 | 0852-2702-2999</p>
             </div>
 
             <div className="flex items-center gap-3">
@@ -54,7 +54,9 @@ export default function Footer() {
 
           <div className="flex flex-col gap-3">
             <a
-              href="#"
+              href="https://www.instagram.com/cv.anekatechnic/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-3 hover:text-pink-400 transition"
             >
               <FaInstagram size={20} />
@@ -62,15 +64,9 @@ export default function Footer() {
             </a>
 
             <a
-              href="#"
-              className="flex items-center gap-3 hover:text-blue-400 transition"
-            >
-              <FaFacebook size={20} />
-              Facebook
-            </a>
-
-            <a
-              href="#"
+              href="https://www.tiktok.com/@cv.aneka.technic?_r=1&_t=ZS-99MwNMR9pWX"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-3 hover:text-pink-500 transition"
             >
               <FaTiktok size={20} />
@@ -88,7 +84,7 @@ export default function Footer() {
           <p className="text-sm text-blue-100/90 leading-relaxed">
             Senin - Sabtu
             <br />
-            08.00 - 17.00 WIB
+            09.00 - 17.00 WIB
           </p>
 
           <p className="text-sm mt-3 text-blue-200">

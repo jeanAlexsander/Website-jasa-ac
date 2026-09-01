@@ -51,7 +51,10 @@ export default function Navbar() {
               CV. ANEKA TECHNIC
             </h1>
 
-            <p className="text-xs text-slate-500">Professional Service</p>
+            <p className="text-xs text-slate-500">
+              Jl. Sokajati, Pepedan, Bantarsoka, Kec. Purwokerto Barat,
+              Kabupaten Banyumas, Jawa Tengah 53133
+            </p>
           </div>
         </Link>
 
@@ -85,7 +88,7 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           {/* Desktop CTA */}
           <a
-            href="https://wa.me/628123456789"
+            href="https://wa.me/6285801330301"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden items-center gap-2 rounded-full bg-orange-600 px-6 py-3 font-semibold text-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:bg-orange-800 hover:shadow-xl lg:inline-flex"

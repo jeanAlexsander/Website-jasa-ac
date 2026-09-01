@@ -5,7 +5,7 @@ import Footer from "../components/layout/Footer";
 
 export const metadata: Metadata = {
   title: {
-    default: "Jasa AC Purwokerto | CV Aneka Technic",
+    default: "Jasa Service AC Purwokerto | CV Aneka Technic",
     template: "%s | CV Aneka Technic",
   },
   description:
