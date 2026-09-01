@@ -12,7 +12,7 @@ export default function LayananPage() {
       <LayananHero />
 
       {/* Service List */}
-      <ServiceList />
+      {/* <ServiceList /> */}
 
       {/* Price Section */}
       <PriceSection />

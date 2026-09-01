@@ -69,7 +69,7 @@ export default function HeroSection() {
             {/* Foto Kecil */}
             <div className="flex flex-col gap-4">
               <Image
-                src="/images/pasang-ac.png"
+                src="/images/pasang-ac-5.png"
                 alt="Instalasi AC"
                 width={300}
                 height={340}

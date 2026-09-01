@@ -29,20 +29,20 @@ export const features = [
 
 export const stats = [
   {
-    value: "1500+",
+    value: "10000+",
     label: "AC Diservis",
   },
   {
-    value: "5+",
+    value: "13+",
     label: "Tahun Pengalaman",
   },
   {
-    value: "500+",
-    label: "Pelanggan Puas",
+    value: "4.9⭐",
+    label: "Rating",
   },
   {
     value: "100%",
-    label: "Garansi Pekerjaan",
+    label: "Teknisi Profesional",
   },
 ];
 

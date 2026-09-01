@@ -12,7 +12,7 @@ const menus = [
     href: "/",
   },
   {
-    name: "Layanan",
+    name: "Layanan & Harga",
     href: "/layanan",
   },
   {
@@ -52,8 +52,7 @@ export default function Navbar() {
             </h1>
 
             <p className="text-xs text-slate-500">
-              Jl. Sokajati, Pepedan, Bantarsoka, Kec. Purwokerto Barat,
-              Kabupaten Banyumas, Jawa Tengah 53133
+              General Service, Maintenance and Supplier
             </p>
           </div>
         </Link>

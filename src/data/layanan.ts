@@ -9,6 +9,8 @@ import {
   Building2,
   Store,
   School,
+  Wind,
+  PackageOpen,
 } from "lucide-react";
 
 export const services = [
@@ -52,24 +54,107 @@ export const services = [
 
 export const prices = [
   {
-    title: "Cuci AC",
-    price: "Rp75.000",
-    desc: "Pembersihan unit indoor dan outdoor agar AC kembali dingin.",
+    title: "Cleaning AC",
+    icon: Wind,
+    desc: "Pembersihan AC agar tetap dingin dan bekerja optimal.",
+    features: [
+      {
+        name: "Cleaning AC Split",
+        price: "Rp75.000",
+      },
+      {
+        name: "Cleaning AC Cassette",
+        price: "Rp300.000",
+      },
+      {
+        name: "Cleaning AC Standing Floor",
+        price: "Rp250.000",
+      },
+      {
+        name: "Cleaning AC Central / PK",
+        price: "Rp225.000",
+      },
+    ],
   },
+
   {
     title: "Service AC",
-    price: "Rp100.000",
+    icon: Wrench,
     desc: "Pengecekan dan perbaikan masalah pada unit AC.",
+    features: [
+      {
+        name: "Isi Gas Freon AC 0.5 PK - 1 PK (R22)",
+        price: "Rp200.000",
+      },
+      {
+        name: "Isi Gas Freon AC 0.5 PK - 1 PK (R32 - 410)",
+        price: "Rp225.000",
+      },
+      {
+        name: "Isi Gas Freon AC 1.5 PK (R22)",
+        price: "Rp250.000",
+      },
+      {
+        name: "Isi Gas Freon AC 1.5 PK (R32 - 410)",
+        price: "Rp300.000",
+      },
+      {
+        name: "Isi Gas Freon AC 2 PK (R22)",
+        price: "Rp300.000",
+      },
+      {
+        name: "Isi Gas Freon AC 2 PK (R32 - 410)",
+        price: "Rp350.000",
+      },
+    ],
   },
+
   {
     title: "Pasang AC",
-    price: "Rp350.000",
+    icon: Snowflake,
     desc: "Pemasangan AC baru dengan instalasi yang rapi.",
+    features: [
+      {
+        name: "Pemasangan AC Split",
+        price: "Rp350.000",
+      },
+      {
+        name: "Pemasangan AC Cassette",
+        price: "Rp1.250.000",
+      },
+      {
+        name: "Pemasangan AC Standing Floor",
+        price: "Rp1.150.000",
+      },
+      {
+        name: "Pemasangan AC Central",
+        price: "Dilihat Dari PK Dan Material Kelengkapan",
+      },
+    ],
   },
+
   {
     title: "Bongkar Pasang",
-    price: "Rp250.000",
+    icon: PackageOpen,
     desc: "Pemindahan AC dengan aman dan profesional.",
+    features: [
+      {
+        name: "Bongkar Pasang AC Split",
+        price: "Rp450.000",
+      },
+      {
+        name: "Bongkar Pasang AC Cassette",
+        price: "Rp2.150.000",
+      },
+      {
+        name: "Bongkar Pasang AC Standing Floor",
+        price: "Rp1.900.000",
+      },
+      {
+        name: "Bongkar Pasang AC Central",
+        price: "Dilihat Dari Kebutuhan",
+      },
+    ],
   },
 ];
 
