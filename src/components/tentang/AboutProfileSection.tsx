@@ -20,9 +20,9 @@ export default function ProfileSection() {
           <motion.div
             initial={{ opacity: 0, x: -60 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: false, amount: 0.1 }}
             transition={{
-              duration: 0.8,
+              duration: 0.3,
               ease: "easeOut",
             }}
           >
@@ -37,12 +37,12 @@ export default function ProfileSection() {
 
           {/* Content */}
           <motion.div
-            initial={{ opacity: 0, x: 60 }}
+            initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: false, amount: 0.1 }}
             transition={{
-              duration: 0.8,
-              delay: 0.15,
+              duration: 0.3,
+              delay: 0.1,
               ease: "easeOut",
             }}
           >
@@ -74,10 +74,10 @@ export default function ProfileSection() {
                     key={item.text}
                     initial={{ opacity: 0, x: 30 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: false, amount: 0.2 }}
+                    viewport={{ once: false, amount: 0.1 }}
                     transition={{
-                      duration: 0.5,
-                      delay: 0.35 + index * 0.12,
+                      duration: 0.3,
+                      delay: 0.1 + index * 0.1,
                       ease: "easeOut",
                     }}
                     className="flex items-center gap-3"

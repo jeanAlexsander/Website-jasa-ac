@@ -11,7 +11,7 @@ export default function ContactHero() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: false, amount: 0.1 }}
             transition={{
               duration: 0.5,
               ease: "easeOut",
@@ -23,9 +23,9 @@ export default function ContactHero() {
 
           {/* Heading */}
           <motion.h1
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: false, amount: 0.1 }}
             transition={{
               duration: 0.7,
               delay: 0.15,
@@ -40,9 +40,9 @@ export default function ContactHero() {
 
           {/* Description */}
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: false, amount: 0.1 }}
             transition={{
               duration: 0.6,
               delay: 0.3,

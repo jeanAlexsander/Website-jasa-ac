@@ -43,12 +43,12 @@ export default function PriceSection() {
             return (
               <motion.div
                 key={item.title}
-                initial={{ opacity: 0, y: 50 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: false, amount: 0.1 }}
                 transition={{
-                  duration: 0.6,
-                  delay: index * 0.15,
+                  duration: 0.3,
+                  delay: index * 0.1,
                   ease: "easeOut",
                 }}
                 className="group flex h-full flex-col rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-orange-700 hover:shadow-xl"
@@ -182,10 +182,10 @@ export default function PriceSection() {
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: false, amount: 0.1 }}
           transition={{
-            duration: 0.5,
-            delay: prices.length * 0.15,
+            duration: 0.2,
+            delay: prices.length * 0.1,
             ease: "easeOut",
           }}
           className="mt-10 text-center text-sm text-slate-500"

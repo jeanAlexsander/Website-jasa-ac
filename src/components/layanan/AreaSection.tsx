@@ -24,12 +24,12 @@ export default function AreaSection() {
             return (
               <motion.div
                 key={item.title}
-                initial={{ opacity: 0, y: 50 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: false, amount: 0.1 }}
                 transition={{
                   duration: 0.6,
-                  delay: index * 0.15,
+                  delay: index * 0.1,
                   ease: "easeOut",
                 }}
                 className="group rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-orange-700 hover:shadow-xl"
@@ -50,12 +50,12 @@ export default function AreaSection() {
 
         {/* Wilayah */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: false, amount: 0.1 }}
           transition={{
             duration: 0.7,
-            delay: coverage.length * 0.15,
+            delay: coverage.length * 0.1,
             ease: "easeOut",
           }}
           className="mt-16 rounded-3xl border border-orange-100 bg-orange-50 p-10"
@@ -63,10 +63,10 @@ export default function AreaSection() {
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: false, amount: 0.1 }}
             transition={{
-              duration: 0.5,
-              delay: 0.2,
+              duration: 0.1,
+              delay: 0.1,
               ease: "easeOut",
             }}
             className="flex items-center gap-3"
@@ -82,11 +82,11 @@ export default function AreaSection() {
             {serviceAreas.map((area, index) => (
               <motion.span
                 key={area}
-                initial={{ opacity: 0, scale: 0.8 }}
+                initial={{ opacity: 0, scale: 0.3 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: false, amount: 0.1 }}
                 transition={{
-                  duration: 0.4,
+                  duration: 0.2,
                   delay: 0.3 + index * 0.08,
                   ease: "easeOut",
                 }}
@@ -100,9 +100,9 @@ export default function AreaSection() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: false, amount: 0.1 }}
             transition={{
-              duration: 0.5,
+              duration: 0.1,
               delay: 0.6,
               ease: "easeOut",
             }}

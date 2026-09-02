@@ -24,12 +24,12 @@ export default function ServicesSection() {
             return (
               <motion.div
                 key={item.title}
-                initial={{ opacity: 0, y: 50 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: false, amount: 0.1 }}
                 transition={{
                   duration: 0.6,
-                  delay: index * 0.15,
+                  delay: index * 0.1,
                   ease: "easeOut",
                 }}
                 className="group rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-orange-700 hover:shadow-xl"
@@ -52,10 +52,10 @@ export default function ServicesSection() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: false, amount: 0.1 }}
           transition={{
             duration: 0.6,
-            delay: homeServices.length * 0.15,
+            delay: homeServices.length * 0.1,
             ease: "easeOut",
           }}
           className="mt-16 text-center"

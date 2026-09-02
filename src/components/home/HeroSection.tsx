@@ -16,7 +16,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.2 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.2 }}
               className="inline-flex items-center rounded-full bg-orange-100 px-4 py-2 text-sm font-semibold text-orange-700"
             >
               ⭐ Teknisi Profesional & Bergaransi
@@ -24,10 +24,10 @@ export default function HeroSection() {
 
             {/* Heading */}
             <motion.h1
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.2 }}
-              transition={{ duration: 0.6, delay: 0.15 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
               className="mt-6 text-5xl font-extrabold leading-tight text-slate-900 lg:text-6xl"
             >
               Solusi
@@ -37,10 +37,10 @@ export default function HeroSection() {
 
             {/* Description */}
             <motion.p
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.2 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
               className="mt-6 max-w-xl text-lg leading-8 text-slate-600"
             >
               Kami menyediakan layanan cuci AC, perbaikan, instalasi, hingga
@@ -50,10 +50,10 @@ export default function HeroSection() {
 
             {/* Button */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.2 }}
-              transition={{ duration: 0.6, delay: 0.45 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
             >
               <Link
                 href="/layanan"
@@ -66,10 +66,10 @@ export default function HeroSection() {
 
           {/* RIGHT */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false, amount: 0.2 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
             className="grid grid-cols-3 gap-4"
           >
             {/* Foto Besar */}
@@ -87,10 +87,10 @@ export default function HeroSection() {
             {/* Foto Kecil */}
             <div className="flex flex-col gap-4">
               <motion.div
-                initial={{ opacity: 0, x: 30 }}
+                initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: false, amount: 0.2 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
               >
                 <Image
                   src="/images/pasang-ac-5.png"
@@ -102,10 +102,10 @@ export default function HeroSection() {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, x: 30 }}
+                initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: false, amount: 0.2 }}
-                transition={{ duration: 0.6, delay: 0.55 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
               >
                 <Image
                   src="/images/pasang-ac-7.png"

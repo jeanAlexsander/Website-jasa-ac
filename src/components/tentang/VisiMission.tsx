@@ -19,9 +19,9 @@ export default function VisionMission() {
           <motion.div
             initial={{ opacity: 0, x: -60 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: false, amount: 0.1 }}
             transition={{
-              duration: 0.7,
+              duration: 0.3,
               ease: "easeOut",
             }}
             className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-orange-700 hover:shadow-lg"
@@ -31,7 +31,7 @@ export default function VisionMission() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: false, amount: 0.2 }}
               transition={{
-                duration: 0.5,
+                duration: 0.2,
                 delay: 0.2,
                 ease: "easeOut",
               }}
@@ -51,12 +51,12 @@ export default function VisionMission() {
 
           {/* Misi */}
           <motion.div
-            initial={{ opacity: 0, x: 60 }}
+            initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: false, amount: 0.1 }}
             transition={{
-              duration: 0.7,
-              delay: 0.15,
+              duration: 0.3,
+              delay: 0.1,
               ease: "easeOut",
             }}
             className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-orange-700 hover:shadow-lg"
@@ -66,7 +66,7 @@ export default function VisionMission() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: false, amount: 0.2 }}
               transition={{
-                duration: 0.5,
+                duration: 0.3,
                 delay: 0.3,
                 ease: "easeOut",
               }}

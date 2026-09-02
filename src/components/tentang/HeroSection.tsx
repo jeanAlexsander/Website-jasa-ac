@@ -13,9 +13,9 @@ export default function AboutHero() {
           <motion.span
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: false, amount: 0.1 }}
             transition={{
-              duration: 0.5,
+              duration: 0.3,
               ease: "easeOut",
             }}
             className="inline-flex rounded-full bg-orange-100 px-4 py-2 text-sm font-semibold text-orange-700"
@@ -25,12 +25,12 @@ export default function AboutHero() {
 
           {/* Heading */}
           <motion.h1
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: false, amount: 0.1 }}
             transition={{
               duration: 0.7,
-              delay: 0.15,
+              delay: 0.1,
               ease: "easeOut",
             }}
             className="mt-6 text-4xl font-extrabold leading-tight text-slate-900 lg:text-6xl"
@@ -43,10 +43,10 @@ export default function AboutHero() {
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: false, amount: 0.1 }}
             transition={{
-              duration: 0.6,
-              delay: 0.3,
+              duration: 0.3,
+              delay: 0.1,
               ease: "easeOut",
             }}
             className="mt-8 max-w-xl text-lg leading-8 text-slate-600"
@@ -61,12 +61,12 @@ export default function AboutHero() {
 
         {/* Right */}
         <motion.div
-          initial={{ opacity: 0, x: 60 }}
+          initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: false, amount: 0.1 }}
           transition={{
-            duration: 0.8,
-            delay: 0.2,
+            duration: 0.3,
+            delay: 0.1,
             ease: "easeOut",
           }}
           className="relative"

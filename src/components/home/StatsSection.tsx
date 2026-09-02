@@ -70,10 +70,10 @@ export default function StatsSection() {
               key={item.label}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, amount: 0.2 }}
+              viewport={{ once: false, amount: 0.1 }}
               transition={{
                 duration: 0.6,
-                delay: index * 0.15,
+                delay: index * 0.1,
                 ease: "easeOut",
               }}
               className="text-center"

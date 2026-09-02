@@ -24,9 +24,9 @@ export default function LayananHero() {
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: false, amount: 0.1 }}
           transition={{
-            duration: 0.5,
+            duration: 0.1,
             ease: "easeOut",
           }}
           className="mb-5 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-400"
@@ -36,12 +36,12 @@ export default function LayananHero() {
 
         {/* Heading */}
         <motion.h1
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: false, amount: 0.1 }}
           transition={{
             duration: 0.7,
-            delay: 0.15,
+            delay: 0.1,
             ease: "easeOut",
           }}
           className="text-4xl font-bold leading-tight text-white sm:text-6xl"
@@ -53,11 +53,11 @@ export default function LayananHero() {
 
         {/* Description */}
         <motion.p
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: false, amount: 0.1 }}
           transition={{
-            duration: 0.6,
+            duration: 0.3,
             delay: 0.3,
             ease: "easeOut",
           }}

@@ -9,9 +9,9 @@ export default function LocationSection() {
       <div className="mx-auto max-w-6xl px-6">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: false, amount: 0.1 }}
           transition={{
             duration: 0.7,
             ease: "easeOut",
@@ -26,9 +26,9 @@ export default function LocationSection() {
 
         {/* Google Maps */}
         <motion.div
-          initial={{ opacity: 0, y: 60 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: false, amount: 0.1 }}
           transition={{
             duration: 0.8,
             delay: 0.2,
