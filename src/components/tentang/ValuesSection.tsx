@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { companyValues } from "../../data/tentang";
 import SectionHeader from "../ui/SectionHeader";
 
@@ -14,13 +17,21 @@ export default function ValuesSection() {
 
         {/* Cards */}
         <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {companyValues.map((item) => {
+          {companyValues.map((item, index) => {
             const Icon = item.icon;
 
             return (
-              <div
+              <motion.div
                 key={item.title}
-                className="group rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false, amount: 0.2 }}
+                transition={{
+                  duration: 0.6,
+                  delay: index * 0.15,
+                  ease: "easeOut",
+                }}
+                className="group rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-orange-700 hover:shadow-lg"
               >
                 <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-orange-100 text-orange-600 transition group-hover:bg-orange-500 group-hover:text-white">
                   <Icon className="h-7 w-7" />
@@ -33,7 +44,7 @@ export default function ValuesSection() {
                 <p className="leading-relaxed text-slate-600">
                   {item.description}
                 </p>
-              </div>
+              </motion.div>
             );
           })}
         </div>

@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 import SectionHeader from "../ui/SectionHeader";
 import { profilePoints } from "../../data/tentang";
 
@@ -14,7 +17,15 @@ export default function ProfileSection() {
 
         <div className="mt-16 grid items-center gap-16 lg:grid-cols-2">
           {/* Image */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: -60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: false, amount: 0.2 }}
+            transition={{
+              duration: 0.8,
+              ease: "easeOut",
+            }}
+          >
             <Image
               src="/images/pasang-ac-10.png"
               alt="CV Aneka Technic"
@@ -22,10 +33,19 @@ export default function ProfileSection() {
               height={450}
               className="rounded-4xl object-cover shadow-xl"
             />
-          </div>
+          </motion.div>
 
           {/* Content */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: 60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: false, amount: 0.2 }}
+            transition={{
+              duration: 0.8,
+              delay: 0.15,
+              ease: "easeOut",
+            }}
+          >
             <h3 className="text-3xl font-bold text-slate-900">
               Tentang CV. Aneka Technic
             </h3>
@@ -44,20 +64,32 @@ export default function ProfileSection() {
               kepada setiap pelanggan.
             </p>
 
+            {/* Profile Points */}
             <div className="mt-8 space-y-4">
-              {profilePoints.map((item) => {
+              {profilePoints.map((item, index) => {
                 const Icon = item.icon;
 
                 return (
-                  <div key={item.text} className="flex items-center gap-3">
-                    <Icon className="h-6 w-6 text-orange-700" />
+                  <motion.div
+                    key={item.text}
+                    initial={{ opacity: 0, x: 30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: false, amount: 0.2 }}
+                    transition={{
+                      duration: 0.5,
+                      delay: 0.35 + index * 0.12,
+                      ease: "easeOut",
+                    }}
+                    className="flex items-center gap-3"
+                  >
+                    <Icon className="h-6 w-6 shrink-0 text-orange-700" />
 
                     <span className="text-slate-700">{item.text}</span>
-                  </div>
+                  </motion.div>
                 );
               })}
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

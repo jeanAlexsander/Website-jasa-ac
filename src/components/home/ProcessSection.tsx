@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { processSteps } from "../../data/home";
 import { ArrowRight, ArrowDown } from "lucide-react";
 import SectionHeader from "../ui/SectionHeader";
@@ -20,8 +23,16 @@ export default function ProcessSection() {
               const Icon = item.icon;
 
               return (
-                <div
+                <motion.div
                   key={item.title}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: false, amount: 0.2 }}
+                  transition={{
+                    duration: 0.6,
+                    delay: index * 0.15,
+                    ease: "easeOut",
+                  }}
                   className="group relative text-center transition-all duration-300 hover:-translate-y-2"
                 >
                   {/* Nomor */}
@@ -40,19 +51,19 @@ export default function ProcessSection() {
                   {index < processSteps.length - 1 && (
                     <ArrowRight
                       className="
-                absolute
-                top-18
-                -right-6
-                hidden
-                h-7
-                w-7
-                text-orange-300
-                transition-all
-                duration-300
-                lg:block
-                group-hover:text-orange-700
-                group-hover:translate-x-1
-              "
+                        absolute
+                        top-18
+                        -right-6
+                        hidden
+                        h-7
+                        w-7
+                        text-orange-300
+                        transition-all
+                        duration-300
+                        lg:block
+                        group-hover:translate-x-1
+                        group-hover:text-orange-700
+                      "
                     />
                   )}
 
@@ -67,16 +78,16 @@ export default function ProcessSection() {
                   {index < processSteps.length - 1 && (
                     <ArrowDown
                       className="
-                mx-auto mt-8 h-6 w-6
-                text-orange-300
-                transition-all duration-300
-                group-hover:text-orange-700
-                group-hover:translate-y-1
-                lg:hidden
-              "
+                        mx-auto mt-8 h-6 w-6
+                        text-orange-300
+                        transition-all duration-300
+                        group-hover:translate-y-1
+                        group-hover:text-orange-700
+                        lg:hidden
+                      "
                     />
                   )}
-                </div>
+                </motion.div>
               );
             })}
           </div>

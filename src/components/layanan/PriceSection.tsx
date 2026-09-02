@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 import { prices } from "../../data/layanan";
 import SectionHeader from "../ui/SectionHeader";
 import { MessageCircle } from "lucide-react";
@@ -22,6 +23,7 @@ export default function PriceSection() {
       document.removeEventListener("click", handleClickOutside);
     };
   }, [selectedService]);
+
   return (
     <section className="bg-slate-50 py-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -35,12 +37,20 @@ export default function PriceSection() {
 
         {/* Cards */}
         <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-2">
-          {prices.map((item) => {
+          {prices.map((item, index) => {
             const Icon = item.icon;
 
             return (
-              <div
+              <motion.div
                 key={item.title}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false, amount: 0.2 }}
+                transition={{
+                  duration: 0.6,
+                  delay: index * 0.15,
+                  ease: "easeOut",
+                }}
                 className="group flex h-full flex-col rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-orange-700 hover:shadow-xl"
               >
                 {/* Icon + Title */}
@@ -105,6 +115,7 @@ export default function PriceSection() {
                         <p className="text-sm font-semibold text-slate-900">
                           Pilih Kontak WhatsApp
                         </p>
+
                         <p className="mt-1 text-xs text-slate-500">
                           Pilih admin yang ingin Anda hubungi
                         </p>
@@ -128,6 +139,7 @@ export default function PriceSection() {
                           <p className="text-sm font-semibold text-slate-900">
                             Admin 1
                           </p>
+
                           <p className="text-xs text-slate-500">
                             0858-0133-0301
                           </p>
@@ -152,6 +164,7 @@ export default function PriceSection() {
                           <p className="text-sm font-semibold text-slate-900">
                             Admin 2
                           </p>
+
                           <p className="text-xs text-slate-500">
                             0852-2702-2999
                           </p>
@@ -160,16 +173,26 @@ export default function PriceSection() {
                     </div>
                   )}
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>
 
         {/* Note */}
-        <p className="mt-10 text-center text-sm text-slate-500">
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.2 }}
+          transition={{
+            duration: 0.5,
+            delay: prices.length * 0.15,
+            ease: "easeOut",
+          }}
+          className="mt-10 text-center text-sm text-slate-500"
+        >
           *Harga dapat berubah sesuai tipe AC, lokasi, sparepart, dan tingkat
           kerusakan.
-        </p>
+        </motion.p>
       </div>
     </section>
   );

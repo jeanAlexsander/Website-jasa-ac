@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { services } from "../../data/layanan";
 import SectionHeader from "../ui/SectionHeader";
 
@@ -12,12 +15,20 @@ export default function ServiceList() {
         />
 
         <div className="mt-16 grid gap-8 md:grid-cols-3">
-          {services.map((service) => {
+          {services.map((service, index) => {
             const Icon = service.icon;
 
             return (
-              <div
+              <motion.div
                 key={service.title}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false, amount: 0.2 }}
+                transition={{
+                  duration: 0.6,
+                  delay: index * 0.15,
+                  ease: "easeOut",
+                }}
                 className="group rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-orange-700 hover:shadow-xl"
               >
                 {/* Icon */}
@@ -34,7 +45,7 @@ export default function ServiceList() {
                 <p className="mt-4 leading-7 text-slate-600">
                   {service.description}
                 </p>
-              </div>
+              </motion.div>
             );
           })}
         </div>

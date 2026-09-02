@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { faqs } from "../../data/layanan";
 import SectionHeader from "../ui/SectionHeader";
@@ -24,37 +25,52 @@ export default function FAQSection() {
             const isOpen = openIndex === index;
 
             return (
-              <div
+              <motion.div
                 key={faq.question}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false, amount: 0.2 }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.1,
+                  ease: "easeOut",
+                }}
                 className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
               >
                 <button
+                  type="button"
                   onClick={() => setOpenIndex(isOpen ? null : index)}
                   className="flex w-full items-center justify-between p-6 text-left transition hover:bg-slate-50"
                 >
-                  <span className="text-lg font-semibold text-slate-900">
+                  <span className="pr-4 text-lg font-semibold text-slate-900">
                     {faq.question}
                   </span>
 
                   <ChevronDown
-                    className={`h-5 w-5 text-orange-700 transition-transform duration-300 ${
+                    className={`h-5 w-5 shrink-0 text-orange-700 transition-transform duration-300 ${
                       isOpen ? "rotate-180" : ""
                     }`}
                   />
                 </button>
 
-                <div
-                  className={`grid transition-all duration-300 ${
-                    isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
-                  }`}
-                >
-                  <div className="overflow-hidden">
-                    <p className="px-6 pb-6 leading-7 text-slate-600">
-                      {faq.answer}
-                    </p>
-                  </div>
-                </div>
-              </div>
+                <AnimatePresence initial={false}>
+                  {isOpen && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{
+                        duration: 0.3,
+                        ease: "easeInOut",
+                      }}
+                    >
+                      <div className="px-6 pb-6">
+                        <p className="leading-7 text-slate-600">{faq.answer}</p>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
             );
           })}
         </div>
