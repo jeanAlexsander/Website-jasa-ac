@@ -5,17 +5,15 @@ import { useEffect, useRef, useState } from "react";
 import { stats } from "../../data/home";
 
 function AnimatedNumber({ value }: { value: string }) {
-  const ref = useRef(null);
+  const ref = useRef<HTMLSpanElement>(null);
 
   const isInView = useInView(ref, {
     once: true,
     amount: 0.5,
   });
 
-  // Cek apakah rating
   const isRating = value.includes("⭐");
 
-  // Ambil angka
   const numericValue = isRating
     ? parseFloat(value.replace("⭐", ""))
     : parseInt(value.replace(/\D/g, ""), 10);
@@ -25,16 +23,12 @@ function AnimatedNumber({ value }: { value: string }) {
   const [displayValue, setDisplayValue] = useState(0);
 
   useEffect(() => {
-    if (!isInView) {
-      setDisplayValue(0);
-      return;
-    }
-
-    if (isNaN(numericValue)) return;
+    if (!isInView || isNaN(numericValue)) return;
 
     let start = 0;
-    const duration = 1500;
-    const increment = numericValue / (duration / 30);
+    const duration = 1200;
+    const intervalTime = 30;
+    const increment = numericValue / (duration / intervalTime);
 
     const timer = setInterval(() => {
       start += increment;
@@ -45,7 +39,7 @@ function AnimatedNumber({ value }: { value: string }) {
       } else {
         setDisplayValue(start);
       }
-    }, 30);
+    }, intervalTime);
 
     return () => clearInterval(timer);
   }, [isInView, numericValue]);
@@ -62,21 +56,24 @@ function AnimatedNumber({ value }: { value: string }) {
 
 export default function StatsSection() {
   return (
-    <section className="border-y border-slate-200 bg-white py-12">
+    <section className="overflow-x-hidden border-y border-slate-200 bg-white py-12">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
+        <div className="grid min-w-0 grid-cols-2 gap-8 md:grid-cols-4">
           {stats.map((item, index) => (
             <motion.div
               key={item.label}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, amount: 0.1 }}
+              viewport={{
+                once: false,
+                amount: 0.1,
+              }}
               transition={{
                 duration: 0.6,
                 delay: index * 0.1,
                 ease: "easeOut",
               }}
-              className="text-center"
+              className="min-w-0 text-center"
             >
               <h3 className="text-4xl font-extrabold text-orange-700">
                 <AnimatedNumber value={item.value} />

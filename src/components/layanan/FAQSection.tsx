@@ -10,7 +10,7 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="bg-white py-20">
+    <section className="overflow-x-hidden bg-white py-20">
       <div className="mx-auto max-w-4xl px-6 lg:px-8">
         {/* Header */}
         <SectionHeader
@@ -29,20 +29,23 @@ export default function FAQSection() {
                 key={faq.question}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false, amount: 0.1 }}
+                viewport={{
+                  once: false,
+                  amount: 0.1,
+                }}
                 transition={{
-                  duration: 0.2,
+                  duration: 0.5,
                   delay: index * 0.1,
                   ease: "easeOut",
                 }}
-                className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
+                className="min-w-0 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
               >
                 <button
                   type="button"
                   onClick={() => setOpenIndex(isOpen ? null : index)}
-                  className="flex w-full items-center justify-between p-6 text-left transition hover:bg-slate-50"
+                  className="flex w-full min-w-0 items-center justify-between gap-4 p-6 text-left transition hover:bg-slate-50"
                 >
-                  <span className="pr-4 text-lg font-semibold text-slate-900">
+                  <span className="min-w-0 pr-2 text-lg font-semibold text-slate-900">
                     {faq.question}
                   </span>
 

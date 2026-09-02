@@ -7,44 +7,53 @@ import { profilePoints } from "../../data/tentang";
 
 export default function ProfileSection() {
   return (
-    <section className="bg-slate-50 py-20">
-      <div className="mx-auto max-w-7xl px-6">
+    <section className="overflow-x-hidden bg-slate-50 py-20">
+      <div className="mx-auto min-w-0 max-w-7xl px-6">
         <SectionHeader
           badge="PROFIL PERUSAHAAN"
           title="Mitra Terpercaya Untuk Kebutuhan AC Anda"
           description="Kami berkomitmen memberikan layanan service AC yang profesional dengan mengutamakan kualitas pekerjaan dan kepuasan pelanggan."
         />
 
-        <div className="mt-16 grid items-center gap-16 lg:grid-cols-2">
+        <div className="mt-16 grid min-w-0 items-center gap-16 lg:grid-cols-2">
           {/* Image */}
           <motion.div
-            initial={{ opacity: 0, x: -60 }}
+            initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false, amount: 0.1 }}
+            viewport={{
+              once: false,
+              amount: 0.1,
+            }}
             transition={{
-              duration: 0.3,
+              duration: 0.6,
               ease: "easeOut",
             }}
+            className="min-w-0"
           >
             <Image
               src="/images/pasang-ac-10.png"
               alt="CV Aneka Technic"
               width={600}
               height={450}
-              className="rounded-4xl object-cover shadow-xl"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="h-auto w-full max-w-full rounded-4xl object-cover shadow-xl"
             />
           </motion.div>
 
           {/* Content */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
+            initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false, amount: 0.1 }}
+            viewport={{
+              once: false,
+              amount: 0.1,
+            }}
             transition={{
-              duration: 0.3,
+              duration: 0.6,
               delay: 0.1,
               ease: "easeOut",
             }}
+            className="min-w-0"
           >
             <h3 className="text-3xl font-bold text-slate-900">
               Tentang CV. Aneka Technic
@@ -74,17 +83,20 @@ export default function ProfileSection() {
                     key={item.text}
                     initial={{ opacity: 0, x: 30 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: false, amount: 0.1 }}
+                    viewport={{
+                      once: false,
+                      amount: 0.1,
+                    }}
                     transition={{
-                      duration: 0.3,
+                      duration: 0.5,
                       delay: 0.1 + index * 0.1,
                       ease: "easeOut",
                     }}
-                    className="flex items-center gap-3"
+                    className="flex min-w-0 items-center gap-3"
                   >
                     <Icon className="h-6 w-6 shrink-0 text-orange-700" />
 
-                    <span className="text-slate-700">{item.text}</span>
+                    <span className="min-w-0 text-slate-700">{item.text}</span>
                   </motion.div>
                 );
               })}

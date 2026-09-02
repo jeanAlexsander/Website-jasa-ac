@@ -5,20 +5,23 @@ import { motion } from "framer-motion";
 
 export default function AboutHero() {
   return (
-    <section className="bg-white py-20 lg:py-28">
-      <div className="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2">
+    <section className="overflow-x-hidden bg-white py-20 lg:py-28">
+      <div className="mx-auto grid min-w-0 max-w-7xl items-center gap-16 px-6 lg:grid-cols-2">
         {/* Left */}
-        <div>
+        <div className="min-w-0">
           {/* Badge */}
           <motion.span
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.1 }}
+            viewport={{
+              once: false,
+              amount: 0.1,
+            }}
             transition={{
-              duration: 0.3,
+              duration: 0.5,
               ease: "easeOut",
             }}
-            className="inline-flex rounded-full bg-orange-100 px-4 py-2 text-sm font-semibold text-orange-700"
+            className="inline-flex max-w-full rounded-full bg-orange-100 px-4 py-2 text-sm font-semibold text-orange-700"
           >
             Tentang Kami
           </motion.span>
@@ -27,7 +30,10 @@ export default function AboutHero() {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.1 }}
+            viewport={{
+              once: false,
+              amount: 0.1,
+            }}
             transition={{
               duration: 0.7,
               delay: 0.1,
@@ -43,10 +49,13 @@ export default function AboutHero() {
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.1 }}
+            viewport={{
+              once: false,
+              amount: 0.1,
+            }}
             transition={{
-              duration: 0.3,
-              delay: 0.1,
+              duration: 0.6,
+              delay: 0.2,
               ease: "easeOut",
             }}
             className="mt-8 max-w-xl text-lg leading-8 text-slate-600"
@@ -61,15 +70,18 @@ export default function AboutHero() {
 
         {/* Right */}
         <motion.div
-          initial={{ opacity: 0, x: 30 }}
+          initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: false, amount: 0.1 }}
+          viewport={{
+            once: false,
+            amount: 0.1,
+          }}
           transition={{
-            duration: 0.3,
+            duration: 0.6,
             delay: 0.1,
             ease: "easeOut",
           }}
-          className="relative"
+          className="relative min-w-0"
         >
           <Image
             src="/images/pasang-ac-8.png"
@@ -77,7 +89,8 @@ export default function AboutHero() {
             width={650}
             height={500}
             priority
-            className="rounded-4xl object-cover shadow-xl"
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            className="h-auto w-full max-w-full rounded-4xl object-cover shadow-xl"
           />
         </motion.div>
       </div>

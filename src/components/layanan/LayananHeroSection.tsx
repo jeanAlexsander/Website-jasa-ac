@@ -19,14 +19,18 @@ export default function LayananHero() {
         <div className="absolute inset-0 bg-zinc-950/80" />
       </div>
 
-      <div className="relative mx-auto max-w-5xl px-6 py-28 text-center lg:px-8">
+      {/* Content */}
+      <div className="relative mx-auto min-w-0 max-w-5xl px-6 py-28 text-center lg:px-8">
         {/* Label */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.1 }}
+          viewport={{
+            once: false,
+            amount: 0.1,
+          }}
           transition={{
-            duration: 0.1,
+            duration: 0.5,
             ease: "easeOut",
           }}
           className="mb-5 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-400"
@@ -38,7 +42,10 @@ export default function LayananHero() {
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.1 }}
+          viewport={{
+            once: false,
+            amount: 0.1,
+          }}
           transition={{
             duration: 0.7,
             delay: 0.1,
@@ -55,9 +62,12 @@ export default function LayananHero() {
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.1 }}
+          viewport={{
+            once: false,
+            amount: 0.1,
+          }}
           transition={{
-            duration: 0.3,
+            duration: 0.6,
             delay: 0.3,
             ease: "easeOut",
           }}

@@ -7,7 +7,7 @@ import SectionHeader from "../ui/SectionHeader";
 
 export default function ProcessSection() {
   return (
-    <section className="bg-white py-24">
+    <section className="overflow-x-hidden bg-white py-24">
       <div className="mx-auto max-w-7xl px-6">
         {/* Heading */}
         <SectionHeader
@@ -18,7 +18,7 @@ export default function ProcessSection() {
 
         {/* Timeline */}
         <div className="relative mt-20">
-          <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid min-w-0 gap-12 md:grid-cols-2 lg:grid-cols-4">
             {processSteps.map((item, index) => {
               const Icon = item.icon;
 
@@ -27,13 +27,16 @@ export default function ProcessSection() {
                   key={item.title}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: false, amount: 0.1 }}
+                  viewport={{
+                    once: false,
+                    amount: 0.1,
+                  }}
                   transition={{
                     duration: 0.6,
                     delay: index * 0.1,
                     ease: "easeOut",
                   }}
-                  className="group relative text-center transition-all duration-300 hover:-translate-y-2"
+                  className="group relative min-w-0 text-center transition-all duration-300 hover:-translate-y-2"
                 >
                   {/* Nomor */}
                   <div className="mb-5">
@@ -44,7 +47,7 @@ export default function ProcessSection() {
 
                   {/* Icon */}
                   <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full border-4 border-orange-100 bg-white shadow-md transition-all duration-300 group-hover:border-orange-700 group-hover:bg-orange-700 group-hover:shadow-xl">
-                    <Icon className="h-9 w-9 text-orange-700 transition-all duration-300 group-hover:scale-110 group-hover:text-white" />
+                    <Icon className="h-9 w-9 shrink-0 text-orange-700 transition-all duration-300 group-hover:scale-110 group-hover:text-white" />
                   </div>
 
                   {/* Panah Desktop */}
@@ -52,7 +55,7 @@ export default function ProcessSection() {
                     <ArrowRight
                       className="
                         absolute
-                        top-18
+                        top-[4.5rem]
                         -right-6
                         hidden
                         h-7
@@ -78,9 +81,11 @@ export default function ProcessSection() {
                   {index < processSteps.length - 1 && (
                     <ArrowDown
                       className="
-                        mx-auto mt-8 h-6 w-6
+                        mx-auto mt-8
+                        h-6 w-6
                         text-orange-300
-                        transition-all duration-300
+                        transition-all
+                        duration-300
                         group-hover:translate-y-1
                         group-hover:text-orange-700
                         lg:hidden

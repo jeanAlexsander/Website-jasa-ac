@@ -4,14 +4,17 @@ import { motion } from "framer-motion";
 
 export default function ContactHero() {
   return (
-    <section className="bg-white py-24">
+    <section className="overflow-x-hidden bg-white py-24">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="mx-auto min-w-0 max-w-3xl text-center">
           {/* Badge */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.1 }}
+            viewport={{
+              once: false,
+              amount: 0.1,
+            }}
             transition={{
               duration: 0.5,
               ease: "easeOut",
@@ -25,7 +28,10 @@ export default function ContactHero() {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.1 }}
+            viewport={{
+              once: false,
+              amount: 0.1,
+            }}
             transition={{
               duration: 0.7,
               delay: 0.15,
@@ -42,7 +48,10 @@ export default function ContactHero() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.1 }}
+            viewport={{
+              once: false,
+              amount: 0.1,
+            }}
             transition={{
               duration: 0.6,
               delay: 0.3,
