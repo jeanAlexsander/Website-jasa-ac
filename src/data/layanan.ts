@@ -11,6 +11,8 @@ import {
   School,
   Wind,
   PackageOpen,
+  Refrigerator,
+  WashingMachine,
 } from "lucide-react";
 
 export const services = [
@@ -152,6 +154,49 @@ export const prices = [
       },
       {
         name: "Bongkar Pasang AC Central",
+        price: "Dilihat Dari Kebutuhan",
+      },
+    ],
+  },
+
+  {
+    title: "Peralatan Pendingin - Refgrirasi",
+    icon: Refrigerator,
+    desc: "Layanan perawatan dan perbaikan kulkas, freezer, showcase, dan chiller.",
+    features: [
+      {
+        name: "Service Kulkas",
+        price: "Dilihat Dari Kebutuhan",
+      },
+      {
+        name: "Service Freezer",
+        price: "Dilihat Dari Kebutuhan",
+      },
+      {
+        name: "Service Showcase",
+        price: "Dilihat Dari Kebutuhan",
+      },
+      {
+        name: "Service Chiller",
+        price: "Dilihat Dari Kebutuhan",
+      },
+    ],
+  },
+  {
+    title: "Peralatan Rumah Tangga - Home Appliances",
+    icon: WashingMachine,
+    desc: "Layanan perawatan dan perbaikan mesin cuci, water heater, dan dispenser.",
+    features: [
+      {
+        name: "Service Mesin Cuci",
+        price: "Dilihat Dari Kebutuhan",
+      },
+      {
+        name: "Service Water Heater",
+        price: "Dilihat Dari Kebutuhan",
+      },
+      {
+        name: "Service Dispenser",
         price: "Dilihat Dari Kebutuhan",
       },
     ],
