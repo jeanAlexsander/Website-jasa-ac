@@ -8,11 +8,12 @@ export const metadata: Metadata = {
     default: "Jasa Service AC Purwokerto | CV Aneka Technic",
     template: "%s | CV Aneka Technic",
   },
+
   description:
-    "CV Aneka Technic menyediakan jasa service AC, cuci AC, perbaikan AC, instalasi AC, dan maintenance AC di Purwokerto dan sekitarnya.",
+    "CV Aneka Technic menyediakan jasa service AC, cuci AC, perbaikan AC, instalasi AC, dan maintenance AC di Purwokerto dan sekitarnya. Hubungi kami: 0858-0133-0301 / 0852-2702-2999.",
 
   keywords: [
-    "jasa AC Purwokerto",
+    "jasa service AC Purwokerto",
     "service AC Purwokerto",
     "cuci AC Purwokerto",
     "perbaikan AC Purwokerto",
@@ -40,9 +41,9 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Jasa AC Purwokerto | CV Aneka Technic",
+    title: "Jasa Service AC Purwokerto | CV Aneka Technic",
     description:
-      "Layanan service AC, cuci AC, perbaikan AC, instalasi AC, dan maintenance AC di Purwokerto dan sekitarnya.",
+      "Layanan service AC, cuci AC, perbaikan AC, instalasi AC, dan maintenance AC di Purwokerto dan sekitarnya. Hubungi: 0858-0133-0301 / 0852-2702-2999.",
     type: "website",
     locale: "id_ID",
     siteName: "CV Aneka Technic",
@@ -50,9 +51,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Jasa AC Purwokerto | CV Aneka Technic",
+    title: "Jasa Service AC Purwokerto | CV Aneka Technic",
     description:
-      "Jasa service AC, cuci AC, perbaikan AC, instalasi AC, dan maintenance AC di Purwokerto.",
+      "Jasa service AC, cuci AC, perbaikan AC, instalasi AC, dan maintenance AC di Purwokerto. Hubungi: 0858-0133-0301 / 0852-2702-2999.",
   },
 };
 
@@ -63,7 +64,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id">
-      <body className="flex flex-col min-h-screen antialiased">
+      <body className="flex min-h-screen flex-col antialiased">
         <Navbar />
         <main className="flex-grow">{children}</main>
         <Footer />
